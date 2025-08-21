@@ -1,0 +1,1 @@
+# Update Operation\n\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book.objects.get(title="1984")\nbook.title = "Nineteen Eighty-Four"\nbook.save()\nprint(book.title)\n```\n\n**Expected Output**:\n```\nNineteen Eighty-Four\n```\n# Confirms the title of the book has been updated.
