@@ -1,5 +1,6 @@
-# Delete Book
-python manage.py shell
->>> from bookshelf.models import Book
->>> book = Book.objects.get(id=1)
->>> book.delete()
+#from bookshelf.models import Book
+book = Book.objects.get(id=1)
+book.delete()
+Book.objects.all()
+# Expected Output: <QuerySet []>
+
