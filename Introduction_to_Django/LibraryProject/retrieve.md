@@ -1,1 +1,8 @@
 # Retrieve Operation\n\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book.objects.get(title="1984")\nprint(book.title, book.author, book.publication_year)\n```\n\n**Expected Output**:\n```\n1984 George Orwell 1949\n```\n# Displays the title, author, and publication year of the created book.
+# Retrieve Operation
+
+**Command**:
+```python
+from bookshelf.models import Book
+book = Book.objects.get(title="1984")
+print(book.title, book.author, book.publication_year)
