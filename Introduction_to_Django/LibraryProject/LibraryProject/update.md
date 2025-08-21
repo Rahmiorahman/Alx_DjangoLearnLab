@@ -1,6 +1,6 @@
-from bookshelf.models import Book
-book = Book.objects.get(title="1984")
-book.title = "Nineteen Eighty-Four"
-book.save()
-book
-# <Book: Nineteen Eighty-Four by George Orwell (1949)>
+# Update Book
+python manage.py shell
+>>> from bookshelf.models import Book
+>>> book = Book.objects.get(id=1)
+>>> book.title = "Updated Title"
+>>> book.save()

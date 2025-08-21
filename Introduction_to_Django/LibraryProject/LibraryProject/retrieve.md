@@ -1,4 +1,5 @@
-from bookshelf.models import Book
-book = Book.objects.get(title="1984")
-book.title, book.author, book.publication_year
-# ('1984', 'George Orwell', 1949)
+# Retrieve Book(s)
+python manage.py shell
+>>> from bookshelf.models import Book
+>>> Book.objects.all()
+>>> Book.objects.get(id=1)
