@@ -1,18 +1,20 @@
-# CRUD Operations for Book Model\n\n## Create Operation\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book(title="1984", author="George Orwell", publication_year=1949)\nbook.save()\n```\n\n**Output**:\n```\n# No output in the shell, but the Book instance is successfully created and saved.\n```\n\n## Retrieve Operation\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book.objects.get(title="1984")\nprint(book.title, book.author, book.publication_year)\n```\n\n**Output**:\n```\n1984 George Orwell 1949\n```\n\n## Update Operation\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book.objects.get(title="1984")\nbook.title = "Nineteen Eighty-Four"\nbook.save()\nprint(book.title)\n```\n\n**Output**:\n```\nNineteen Eighty-Four\n```\n\n## Delete Operation\n**Command**:\n```python\nfrom bookshelf.models import Book\nbook = Book.objects.get(title="Nineteen Eighty-Four")\nbook.delete()\nprint(Book.objects.all())\n```\n\n**Output**:\n```\n<QuerySet []>\n```
-# CRUD Operations for Book Model
+# CRUD Operations on Book Model
 
-## Create Operation
-**Command**:
+This document shows how to perform **Create, Retrieve, Update, and Delete** operations on the `Book` model in Django using the interactive shell.
+
+---
+
+## 1. Create a Book
+
+### Command:
 ```python
-CRUD Operations for Book Model
-Create Operation
-Command:
 from bookshelf.models import Book
-book = Book(title="1984", author="George Orwell", publication_year=1949)
-book.save()
+book = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
+book
 
 Output:
-# No output in the shell, but the Book instance is successfully created and saved.
+<Book: 1984 by George Orwell (1949)>
+
 
 Retrieve Operation
 Command:
